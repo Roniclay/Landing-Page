@@ -23,6 +23,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 
 }
 
@@ -199,7 +200,9 @@ a {
 
 }
 
+
 .top3-content {
+    padding-top: 3rem;
     max-width: 80rem;
     display: flex;
     flex-flow: column nowrap;
@@ -231,7 +234,7 @@ a {
     padding-bottom: 3rem;
   }
   
-  .grid h4 {
+.grid h4 {
     font-size: 3rem;
     position: relative;
     padding-top: 2rem;
@@ -239,7 +242,7 @@ a {
     padding-bottom: 3rem;
   }
   
-  .grid h4::before {
+.grid h4::before {
     counter-increment: grid-counter;
     content: counter(grid-counter);
     position: absolute;
@@ -250,11 +253,114 @@ a {
     transform: rotate(5deg);
   }
 
-  .grid-main-heading {
+.grid-main-heading {
 
     margin-bottom: 1rem;
   }
 
-  .grid-description {
+.grid-description {
       margin-bottom: 5rem;
   }
+
+.galeria-img {
+      width: 100%;
+      max-width: 36rem;
+      max-height: 36rem;
+      overflow: hidden;
+  }
+
+.galeria-img img {
+      transition: all 300ms ease-in-out;
+    
+  }
+
+.galeria-img img:hover {
+      transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
+  }
+
+  .responsive-table{
+      overflow: hidden;
+      overflow-x: scroll;
+      width: 100%;
+  }
+table {
+    min-width: 360px;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.6rem;
+  }
+
+  
+table td, table th {
+      padding: 1rem;
+      text-align: left;
+      border: 0.1rem solid var(--ligth-gray-color);
+}
+
+table tfoot {
+      background-color: var(--ligth-gray-color);
+}
+
+table caption {
+    font-style: italic;
+    font-size: 1.2rem;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.contact-form {
+    grid-column: span 2;
+}
+
+.form-grid legend {
+    font-style: italic;
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+}
+
+.contact-form .form-grid {
+    border: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--gap)
+}
+
+.form-group {
+    flex: 1 1 400px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.form-group input, .form-group textarea {
+    border: none;
+    background: var(--white-color);
+    padding: 1.5rem 2rem;
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+body .full-width {
+    width: 100%;
+    flex: 1 1 100%;
+}
+
+.form-group button {
+    border: 0.5rem solid var(--white-color);
+    background: none;
+    color: var(--white-color);
+    padding: 1.5rem 2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+    margin-left: 80%;
+
+}
+
+.form-group button:hover{
+    background: var(--white-color);
+    color: var(--primary-color);
+}
